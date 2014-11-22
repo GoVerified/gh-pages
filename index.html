@@ -6,89 +6,7 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="css/jhburton.css">
 		<link rel="stylesheet" type="text/css" href="css/signin.css">
-		<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-	<style type="text/css">
-	     body {
-
-	     }
-	     .progress {
-	     	display: none;
-	     	padding: 10px 0px;
-	     }
-	    .progress2 {
-			width: 4px;
-			height: 4px;
-			color: #2f2f2f;
-			border-radius: 100px;
-			position: relative;
-			/*-webkit-animation: progresse 0.5s both 0s infinite alternate;*/
-			-webkit-animation: progresse 4.5s both 0s infinite;
-			-webkit-animation: progressd 4.5s both 0s infinite;
-			background: #20659C;
-
-			float: left;
-		}
-
-		.progress3 {
-			-webkit-animation-delay: 0.2s;
-		}
-
-		.progress4 {
-			-webkit-animation-delay: 0.4s;
-		}
-
-		.progress5 {
-			-webkit-animation-delay: 0.6s;
-		}
-		
-
-
-		@-webkit-keyframes progresse {
-			from {
-				margin-left: 0%;
-			}
-
-			to {
-				margin-left: 100%;
-			}
-		}
-
-		@-webkit-keyframes progressd {
-			0% {
-				left: 0%;
-			}
-
-			95% {
-				opacity: 1;
-			}
-
-			97% {
-				opacity: 0;
-			}
-
-			100% {
-				left: 100%;
-				opacity: 0;
-				overflow: hidden;
-			}
-		}	
-	</style><script type="text/javascript">
-		$(document).ready (function() {
-			function error() {
-				$(".error").html("Enter a email.");
-				$(".progress").css("display", "none");
-			}
-			$("#contact").submit (function() {
-				$(".progress").css("display", "block");
-				if($("#email").val() == "") {
-					window.setTimeout(error, 2000);
-					return false;
-				} else {
-					return true;
-				}
-			});
-		});
-	</script></head>
+	<style type="text/css"></style></head>
 	<body>
 	<div class="nav7">
 		<div class="header">
@@ -102,10 +20,9 @@
 		<div class="text2">Need a new account? <a href="https://jhburton.co.uk/create" class="text4">Create Account</a></div><div class="content">
 			<div class="content2">
 				<h1>Sign in</h1>
-				<div class="error"></div>
 				<form id="contact" action="" method="POST">
 					
-					<div class="textbox"><input type="text" class="textbox2" id="email" name="firstname" placeholder="Email"></div>
+					<div class="textbox"><input type="email" class="textbox2" name="firstname" placeholder="Email" required=""></div>
 					
 					<div class="textbox"><input type="password" class="textbox2" name="lastname" placeholder="Password"></div>
 					<div class="text">Forgot your password?</div>
@@ -113,12 +30,6 @@
 					
 					
 					<div class="submit"><input type="submit" class="submit2" value="Sign in"></div>
-					<div class="progress">
-						<div class="progress2"></div>
-						<div class="progress2 progress3"></div>
-						<div class="progress2 progress4"></div>
-						<div class="progress2 progress5"></div>
-					</div>
 				</form>
 			</div>
 		</div>
